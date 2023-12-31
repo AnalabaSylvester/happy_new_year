@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#greeting h1 {
+    letter-spacing: 5px;
+    font-size: 3em;
+    animation: bounceAndGlow 2s infinite alternate, colorTransition 3s infinite;
+}
+
+#greeting h4 {
+    font-size: 2em;
+    animation: bounceAndGlow 2s infinite alternate, colorTransition 3s infinite;
+}
+
+.hero-txt {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    left: 50%;
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom:80px;
+}
+
+.btns a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 5px;
+    margin: 10px 5px;
+
+    letter-spacing: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    border: #ffffff 1px solid;
+    transition: all ease-in-out 0.5s;
+}
+
+.btns a:hover{
+    color: wheat;
+}
+
+
+small {
+    text-align: center;
+    display: block;
+    font-size: 1.0em;
+
+    font-family: sans-serif;
+
+    margin-top: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    animation: colorAnimation 5s infinite;
+    margin-bottom: 20px;
+    /* 5 seconds loop for the animation */
+}
+
+
+@keyframes colorAnimation {
+    0% {
+        color: #3498db;
+    }
+
+    50% {
+        color: #e74c3c;
+
+    }
+
+    100% {
+        color: #3498db;
+
+    }
+}
+
+@keyframes bounceAndGlow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        text-shadow: 0 0 10px #ffd700;
+        
+    }
+
+    50% {
+        transform: translateY(-50px);
+        text-shadow: 0 0 20px #ff6347;
+        
+    }
+}
+
+@keyframes colorTransition {
+
+    0%,
+    100% {
+        color: #ffd700;
+        color: #ffa909;
+        color: #096ef3;
+        /* Gold color */
+    }
+
+    50% {
+        color: #ff6347;
+        color: #ff006a;
+        color: #ee8e21;
+        /* Tomato color */
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    /* Adjust styles for screens with a maximum width of 600px */
+    #greeting h1 {
+        font-size: 2em;
+    }
+
+    #greeting h4 {
+        font-size: 1.5em;
+    }
+
+    .btns a {
+        font-size: 18px;
+    }
+}

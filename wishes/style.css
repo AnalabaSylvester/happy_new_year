@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 40px;
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.prayer-container {
+    margin: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    animation: borderAnimation 5s infinite alternate;
+    /* 5 seconds loop for the animation */
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.btns a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 5px;
+    margin: 10px 5px;
+
+    letter-spacing: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    border: #ffffff 1px solid;
+    transition: all ease-in-out 0.5s;
+}
+
+.btns a:hover {
+    color: wheat;
+}
+
+
+small {
+    text-align: center;
+    display: block;
+    font-size: 1.0em;
+
+    font-family: sans-serif;
+
+    margin-top: 40px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    animation: colorAnimation 5s infinite;
+    /* 5 seconds loop for the animation */
+}
+
+
+@keyframes colorAnimation {
+    0% {
+        color: #3498db;
+    }
+
+    50% {
+        color: #e74c3c;
+
+    }
+
+    100% {
+        color: #3498db;
+
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #ffffff;
+        transform: scale(1);
+    }
+
+    100% {
+        border-color: #ffa500;
+        /* Orange color */
+        transform: scale(1.1);
+    }
+}
+
+
+.btns a {
+    font-size: 18px;
+}
+
+.prayer {
+    font-size: 1.2em;
+    margin: 0;
+    animation: textAnimation 3s infinite alternate;
+    /* 3 seconds loop for the animation */
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #ffffff;
+        transform: translateY(0);
+    }
+
+    50% {
+        color: #87ceeb;
+        /* Sky blue color */
+    }
+}
+
+/* Media Query for Small Screens */
+@media only screen and (max-width: 600px) {
+    .prayer-container {
+        font-size: 18px;
+        padding: 30px 20px;
+    }
+
+    .prayer {
+        font-size: 1em;
+    }
+}
