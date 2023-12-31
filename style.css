@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 40px;
     background-color: #141414;
     color: #ffffff;
     font-family: 'Arial', sans-serif;
@@ -131,6 +131,9 @@ small {
 
 
 @media only screen and (max-width: 600px) {
+    body{
+        padding: 40px;
+    }
 
     /* Adjust styles for screens with a maximum width of 600px */
     #greeting h1 {
